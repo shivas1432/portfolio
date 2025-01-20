@@ -5,31 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Layout</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Modal functionality for profile image
-            const profileImage = document.getElementById("profileImage");
-            const modal = document.getElementById("imageModal");
-            const closeBtn = document.getElementById("closeBtn");
-
-            // When the profile image is clicked, show the modal
-            profileImage.addEventListener("click", function() {
-                modal.style.display = "flex";
-            });
-
-            // When the close button is clicked, hide the modal
-            closeBtn.addEventListener("click", function() {
-                modal.style.display = "none";
-            });
-
-            // Optional: Close the modal when clicked anywhere outside the image
-            window.addEventListener("click", function(event) {
-                if (event.target === modal) {
-                    modal.style.display = "none";
-                }
-            });
-        });
-    </script>
+    
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -88,7 +65,7 @@
                     </button>
                 </a>
                 
-                <a href="projects.html">
+                <a href="#" id="openProjects">
                     <button type="button" class="contact-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 20 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-craft">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -101,7 +78,7 @@
                 </a>
                 
                 <!-- Link to GitHub -->
-                <a href=" https://github.com/shivas1432 " target="_blank">
+                <a href="https://github.com/shivas1432" target="_blank">
                     <button class="contact-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 20 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -128,8 +105,13 @@
             </div>
         </div>
     </div>
-    
 
-    
+    <!-- Projects Modal -->
+    <div class="projects-modal" id="projectsModal">
+        <span class="close-btn" id="closeProjectsBtn">&times;</span>
+        <div id="frontend-projects" class="projects-wrapper">
+            
+        </div>
+    </div>
 </body>
 </html>
