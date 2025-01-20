@@ -1,0 +1,111 @@
+
+ /* projects section */
+ /* Base Styles */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .projects-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+  }
+  
+  .project-container {
+    width: 100%;
+    max-width: 500px;
+   
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-container:hover {
+    transform: scale(1.05);
+    background-color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .project-container p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .preview-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .preview-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .project-container {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-container {
+      width: calc(100% - 20px);
+    }
+  }
+  
