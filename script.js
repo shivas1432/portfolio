@@ -125,14 +125,14 @@ function toggleVideoPreview(videoId, button) {
 function populateProjects() {
   const frontendWrapper = document.getElementById('frontend-projects');
   
-  // Check if the frontendWrapper exists before appending projects
+
   if (frontendWrapper) {
       frontendProjects.forEach(project => {
           const projectElement = createProjectElement(project);
           frontendWrapper.appendChild(projectElement);
       });
 
-      // Add caution message after all projects
+      // caution message after all projects
       const cautionMessage = document.createElement('div');
       cautionMessage.classList.add('caution-message');
       cautionMessage.innerHTML = `
@@ -164,7 +164,7 @@ function closeProjectsModal() {
 
 // Event listener to handle modal opening and closing
 document.addEventListener("DOMContentLoaded", function() {
-  populateProjects(); // Populate frontend projects only after DOM is fully loaded
+  populateProjects();
 
   // Open the projects modal when the "Projects" button is clicked
   document.getElementById("openProjects").addEventListener("click", openProjectsModal);
@@ -172,3 +172,32 @@ document.addEventListener("DOMContentLoaded", function() {
   // Close the projects modal when the "Close" button is clicked
   document.getElementById("closeProjectsBtn").addEventListener("click", closeProjectsModal);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const roles = [
+        'FULL STACK WEB DEVELOPER',
+        'REACT DEVELOPER',
+        'FRONTEND DEVELOPER',
+        'BACKEND DEVELOPER'
+    ];
+    const roleText = document.getElementById('roleText');
+    let roleIndex = 0;
+
+    function changeRole() {
+        
+        roleText.classList.remove('focus-in-expand-fwd');
+
+       
+        setTimeout(() => {
+            roleText.textContent = roles[roleIndex];
+            roleText.classList.add('focus-in-expand-fwd');
+
+          
+            roleIndex = (roleIndex + 1) % roles.length;
+        }, 50); 
+    }
+
+    // Change roles every 3 seconds
+    setInterval(changeRole, 3000);
+});
+
